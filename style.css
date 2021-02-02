@@ -14,16 +14,15 @@ body {
   color: #555;
   background-color: #f7f7f7;
   min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .container {
+  position: relative;
+
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 10vh;
 }
 
 .countries {
@@ -35,7 +34,7 @@ body {
   transition: opacity 1s;
 }
 .country::before {
-  content: 'Your country';
+  content: "Your country";
   width: 100%;
   position: relative;
   top: -3rem;
@@ -47,6 +46,7 @@ body {
   color: #888;
 }
 .country {
+  margin: auto;
   background-color: #fff;
   box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
   font-size: 1.8rem;
@@ -57,7 +57,7 @@ body {
 }
 
 .neighbour::before {
-  content: 'Neighbour country';
+  content: "Neighbour country";
   width: 100%;
   position: absolute;
   top: -4rem;
@@ -112,7 +112,10 @@ body {
 .btn-country {
   border: none;
   font-size: 2rem;
-  padding: 2rem 5rem;
+  position: absolute;
+  margin-top: 60vh;
+  margin-left: 1vw;
+  padding: 1rem 2rem;
   border-radius: 0.7rem;
   color: white;
   background-color: orangered;
